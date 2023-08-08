@@ -1,0 +1,38 @@
+{
+  "name": "responsive-artist-page",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Page project for The Odin Project demonstrating ability to make responsive websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WavyBoyJodii/responsive-artist-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WavyBoyJodii/responsive-artist-page/issues"
+  },
+  "homepage": "https://github.com/WavyBoyJodii/responsive-artist-page#readme",
+  "dependencies": {
+    "eslint-config-wesbos": "^3.2.3"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
