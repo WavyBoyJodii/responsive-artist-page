@@ -6,6 +6,7 @@
   font-family: 'Black Bamboo';
   src: url(/src/assets/Black-Bamboo-Regular.otf);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   z-index: 1000;
@@ -53,6 +54,7 @@ header {
   color: var(--text-color);
   font-size: 40px;
   font-weight: bold;
+  /* vertical-align: middle; */
 }
 
 .logo i {
@@ -100,7 +102,7 @@ section {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -109,6 +111,20 @@ section {
 .left-hero {
   max-width: 600px;
   max-height: 500px;
+}
+.social-icons {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 20px; */
+  margin: 1rem 35px;
+}
+.social-icons a {
+  transition: all ease 0.55s;
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
 }
 .right-hero {
   max-height: 500px;
@@ -140,14 +156,24 @@ section {
   font-size: 22px;
   font-weight: 400;
 }
+.song-card {
+  background-color: #0f0f0f;
+  border-radius: 18px;
+  opacity: 0.9;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
 .song-desc-large {
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
-  color: black;
+  color: var(--second-color);
   float: left;
   margin-bottom: 0.1rem;
   margin-right: 0.5rem;
+  padding-top: 10px;
 }
 .song-desc {
   color: white;
@@ -158,8 +184,7 @@ section {
   line-height: 26px;
   /* max-width: 550px; */
   margin-bottom: 1rem;
-  background-color: #0f0f0f;
-  border-radius: 18px;
+  opacity: none;
 }
 .spotify {
   transition: all ease-in-out 0.5s;
@@ -185,6 +210,7 @@ section {
 @media (max-width: 1230px) {
   .hero {
     grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(2, 600px); */
     height: auto;
     align-items: center;
     justify-content: center;
@@ -201,6 +227,7 @@ section {
   }
   .left-hero {
     margin: auto;
+    margin-top: 10px;
     height: auto;
     width: auto;
     max-width: 500px;
@@ -212,5 +239,48 @@ section {
 @media (max-width: 1070px) {
   header {
     padding: 10px 3%;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  .logo {
+    padding-top: 10px;
+  }
+  .navlist {
+    position: absolute;
+    top: -700px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    transition: all ease-in-out 0.5s;
+    /* text-align: left; */
+  }
+  .navlist a {
+    display: block;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0.8rem 1.8rem;
+  }
+  .navlist.open {
+    top: 100%;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --big-font: 3rem;
+    --p-font: 14px;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  /* .left-hero {
+    height: 100vh;
+  } */
+}
+@media (max-height: 600px) {
+  .logo {
+    font-size: 28px;
   }
 }
