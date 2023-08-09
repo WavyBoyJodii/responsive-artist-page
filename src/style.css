@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Bank of England';
+  src: url(/src/assets/Bank-of-England.ttf);
+}
+@font-face {
+  font-family: 'Black Bamboo';
+  src: url(/src/assets/Black-Bamboo-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helsinki', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --text-color: #ffffff;
+  --second-color: #8ec5fc;
+  --big-font: 5.5rem;
+  --p-font: 1.5rem;
+}
+
+body {
+  background-color: var(--second-color);
+  background-image: linear-gradient(
+    180deg,
+    #8ec5fc 0%,
+    #e0c3fc 61%,
+    #9459ea 97%
+  );
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 9%;
+  /* font-size: 30px; */
+  transition: all ease 0.55s;
+  background-color: #0f0f0f;
+}
+
+.logo {
+  font-family: 'Bank of England';
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo i {
+  vertical-align: middle;
+  /* color: var(--text-color); */
+  color: var(--second-color);
+  font-size: 38px;
+  margin-right: 5px;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  font-size: var(--p-font);
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0 35px;
+  transition: all ease 0.55s;
+}
+.navlist li {
+  transition: all ease 0.55s;
+}
+
+.navlist a:hover {
+  color: var(--second-color);
+}
+.navlist li:hover {
+  color: var(--second-color);
+  transform: translateY(-5px);
+}
+#menu-icon {
+  font-size: 40px;
+  color: var(--text-color);
+  z-index: 10001;
+  cursor: pointer;
+  margin: 15px;
+  display: none;
+}
+
+section {
+  padding: 0 12%;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+.left-hero {
+  max-width: 600px;
+  max-height: 500px;
+}
+.right-hero {
+  max-height: 500px;
+  max-width: 600px;
+}
+.right-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all ease-in-out 0.5s;
+}
+
+.right-hero img:hover {
+  transform: translateY(-5px);
+}
+
+.song-title {
+  font-family: 'Bank of England';
+  font-size: var(--big-font);
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.song-phonetic {
+  margin: 5px 0 20px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.song-desc-large {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: black;
+  float: left;
+  margin-bottom: 0.1rem;
+  margin-right: 0.5rem;
+}
+.song-desc {
+  color: white;
+  /* font-family: 'Dancing Script', cursive; */
+  /* font-size: 30px; */
+  font-size: var(--p-font);
+  font-weight: 500;
+  line-height: 26px;
+  /* max-width: 550px; */
+  margin-bottom: 1rem;
+  background-color: #0f0f0f;
+  border-radius: 18px;
+}
+.spotify {
+  transition: all ease-in-out 0.5s;
+}
+.spotify:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1600px) {
+  header {
+    padding: 13px 3%;
+  }
+  section {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 1400px) {
+  :root {
+    --big-font: 4rem;
+    --p-font: 18px;
+  }
+}
+@media (max-width: 1230px) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-hero {
+    order: 2;
+    margin: auto;
+    height: auto;
+    width: auto;
+  }
+  .right-hero img {
+    width: 100%;
+    height: auto;
+  }
+  .left-hero {
+    margin: auto;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+  }
+  section {
+    padding: 50px 5%;
+  }
+}
+@media (max-width: 1070px) {
+  header {
+    padding: 10px 3%;
+  }
+}

@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/59952ffc70.js"
       crossorigin="anonymous"
@@ -13,21 +23,24 @@
   </head>
   <body>
     <header>
-      <p>Jodii</p>
+      <a href="#" class="logo"><i class="bx bx-ghost"></i>Jodii</a>
       <nav>
-        <button>Song</button>
-        <button>Video</button>
-        <button>BTS</button>
-        <button>About Me</button>
+        <ul class="navlist">
+          <li><a href="#" onClick="return false;">Song</a></li>
+          <li><a href="#" onClick="return false;">Video</a></li>
+          <li><a href="#" onClick="return false;">BTS</a></li>
+          <li><a href="#" onClick="return false;">About Me</a></li>
+        </ul>
       </nav>
+      <i class="bx bx-menu" id="menu-icon"></i>
     </header>
-    <div class="hero">
+    <section class="hero">
       <div class="left-hero">
         <h1 class="song-title">Breeshy</h1>
         <p class="song-phonetic">(Breè - She)</p>
         <p class="song-desc">
           <span class="song-desc-large">Breeshy:</span> of or relating to a
-          person, place, or object having considerable wealth
+          person, place, or object having considerable wealth.
         </p>
         <iframe
           style="border-radius: 12px"
@@ -38,11 +51,12 @@
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          class="spotify"
         ></iframe>
       </div>
       <div class="right-hero">
         <img
-          src="https://res.cloudinary.com/dhxbisvar/image/upload/f_auto,w_600/v1691537233/veeze-cover.webp"
+          src="https://res.cloudinary.com/dhxbisvar/image/upload/f_auto,c_scale,w_400/v1691537233/veeze-cover.webp"
           alt="Veeze Ganger Album Cover"
           sizes="(max-width: 400px) 95vw, 43vw"
           srcset="
@@ -51,7 +65,7 @@
           "
         />
       </div>
-      <div class="bottom-hero">
+      <!-- <div class="bottom-hero">
         <div class="social-icons">
           <a href="https://www.tiktok.com/@veezeworst_"
             ><i class="fa-brands fa-tiktok" style="color: #a1bbe8"></i>
@@ -66,8 +80,8 @@
           <a href="https://www.youtube.com/channel/UC4WllQ3vORyygOrM0eba_5A"
             ><i class="fa-brands fa-youtube" style="color: #a1bbe8"></i>
           </a>
-        </div>
+        </div> -->
       </div>
-    </div>
+    </section>
   </body>
 </html>
