@@ -1,5 +1,5 @@
 import './style.css';
-import ScrollReveal from 'scrollreveal';
+import ScrollReveal from 'scrollreveal'; // eslint-disable-line import/no-extraneous-dependencies
 
 const menu = document.getElementById('menu-icon');
 const navlist = document.querySelector('.navlist');
